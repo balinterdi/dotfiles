@@ -14,12 +14,17 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
   end
 end
 
+if const_defined?(Wirble)
+  Wirble.init
+  Wirble.colorize
+end
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
