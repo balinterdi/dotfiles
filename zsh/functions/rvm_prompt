@@ -1,0 +1,4 @@
+local rvm_prompt="$(rvm-prompt)"
+if [ -n "$rvm_prompt" ]; then
+    printf "[$rvm_prompt]"
+fi
