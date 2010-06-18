@@ -14,7 +14,7 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
   end
 end
 
-if const_defined?(Wirble)
+if self.class.const_defined?("Wirble")
   Wirble.init
   Wirble.colorize
 end
