@@ -19,6 +19,12 @@ if self.class.const_defined?("Wirble")
   Wirble.colorize
 end
 
+# Hirb and Wirble both override irb's default output
+# so whichever gets called later dominates the scene
+if self.class.const_defined?("Hirb")
+  Hirb.enable
+end
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
