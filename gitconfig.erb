@@ -7,6 +7,14 @@
 	diff = auto
 	status = auto
 	branch = auto
+[push]
+  default = tracking
+[branch]
+  autosetuprebase = always
+[branch "master"]
+  rebase = true
+[branch "develop"]
+  rebase = true
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
 	editor = mate -w
