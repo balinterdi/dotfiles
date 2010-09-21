@@ -6,3 +6,4 @@
 .tmproj
 .railsrc
 dump.rdb
+config/setup_load_paths.rb
