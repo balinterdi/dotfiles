@@ -29,5 +29,8 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+# t
+alias pt='python ~/code/python/t/t.py --task-dir . --list TODO'
+alias pf='python ~/code/python/t/t.py --task-dir . --list FIXME'
 # commands starting with % for pasting from web
 alias %=' '
