@@ -1,30 +1,24 @@
 #!/usr/bin/env ruby
+require 'rubygems'
 require 'irb/completion'
 require 'irb/ext/save-history'
 
 $LOAD_PATH.push(*Dir[File.join(Gem.dir.sub(/@.*|$/, '@global'), "gems", "*", "lib")]).uniq!
+
+require 'irbtools/configure'
+Irbtools.instance_variable_set("@libs", ["wirble", "hirb", "fileutils", "zucker/debug", "ap", "yaml", "g", "clipboard", "guessmethod", "interactive_editor", "coderay", "boson"])
+Irbtools.init
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee/shortcuts wirble].each do |gem|
+%w[looksee/shortcuts].each do |gem|
   begin
     require gem
   rescue LoadError
   end
-end
-
-if self.class.const_defined?("Wirble")
-  Wirble.init
-  Wirble.colorize
-end
-
-# Hirb and Wirble both override irb's default output
-# so whichever gets called later dominates the scene
-if self.class.const_defined?("Hirb")
-  Hirb.enable
 end
 
 class Object
