@@ -5,14 +5,18 @@ require 'irb/ext/save-history'
 
 $LOAD_PATH.push(*Dir[File.join(Gem.dir.sub(/@.*|$/, '@global'), "gems", "*", "lib")]).uniq!
 
-require 'irbtools/configure'
-Irbtools.instance_variable_set("@libs", ["wirble", "hirb", "fileutils", "zucker/debug", "ap", "yaml", "g", "clipboard", "guessmethod", "interactive_editor", "coderay", "boson"])
-Irbtools.init
-
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
+
+begin
+  require 'irbtools/configure'
+  Irbtools.remove_library("irb_rocket")
+  Irbtools.remove_library("guessmethod")
+  Irbtools.init
+rescue LoadError
+end
 
 %w[looksee/shortcuts].each do |gem|
   begin
