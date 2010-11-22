@@ -4,7 +4,6 @@ else
   export PS1='$(rvm_prompt) %3~ $(git_info_for_prompt)%# '
 fi
 
-export EDITOR='mate -w'
 export PATH="$HOME/bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
@@ -37,6 +36,11 @@ setopt HIST_REDUCE_BLANKS
 
 zle -N newtab
 
+# don't move this above the zle -N newtab
+# or else Emacs keybindings will stop working in Terminal
+export EDITOR="mvim"
+export GIT_EDITOR='mvim -f -c"au VimLeave * !open -a Terminal"'
+
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
@@ -44,3 +48,4 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+

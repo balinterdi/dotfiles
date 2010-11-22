@@ -1,2 +1,4 @@
 export PS1="\w$ "
 export EDITOR="mate -w"
+export GIT_EDITOR='mvim -f -c"au VimLeave * !open -a Terminal"'
+
