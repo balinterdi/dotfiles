@@ -38,5 +38,8 @@ alias b="bundle"
 alias bi="b install --path vendor"
 alias bu="b update"
 alias be="b exec"
+
+alias ti='/Library/Application\ Support/Titanium/mobilesdk/osx/1.6.3-sspinc/titanium.py'
 # commands starting with % for pasting from web
 alias %=' '
+
