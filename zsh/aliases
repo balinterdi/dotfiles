@@ -32,5 +32,11 @@ alias rst='touch tmp/restart.txt'
 # t
 alias pt='python ~/code/python/t/t.py --task-dir . --list TODO'
 alias pf='python ~/code/python/t/t.py --task-dir . --list FIXME'
+# vendor everything still applies
+# http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
 # commands starting with % for pasting from web
 alias %=' '
