@@ -8,3 +8,7 @@
 .railsrc
 dump.rdb
 config/setup_load_paths.rb
+TODO
+.TODO.done
+vendor/ruby
+
