@@ -2,13 +2,12 @@
 alias ..='cd ..'
 
 # ls
-alias ls="ls -F"
 alias l="ls -lAh"
-alias ll="ls -l"
+alias ls="ls -F"
 alias la='ls -A'
+alias ll='tree --dirsfirst -ChFupDaL 1'
 
 # git
-alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
@@ -17,29 +16,67 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gpom="git push origin master"
 
 # rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
-alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
+alias devlog='tail -f log/development.log'
 
 # t
 alias pt='python ~/code/python/t/t.py --task-dir . --list TODO'
 alias pf='python ~/code/python/t/t.py --task-dir . --list FIXME'
+
+alias repl='NODE_NO_READLINE=1 rlwrap -w-40 -p Green -C node jake console'
+
+# -------
+# Bundler
+# -------
+
 # vendor everything still applies
 # http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
-alias b="bundle"
-alias bi="b install --path vendor"
-alias bu="b update"
-alias be="b exec"
+alias bi="bundle install --path vendor"
+alias bu="bundle update"
+alias be="bundle exec"
+alias binit="bundle install && bundle package && echo 'vendor/ruby' >> .gitignore"
 
-alias ti='/Library/Application\ Support/Titanium/mobilesdk/osx/1.6.3-sspinc/titanium.py'
-# commands starting with % for pasting from web
-alias %=' '
+fpath=($ZSH/plugins/bundler $fpath)
+autoload -U compinit
+compinit -i
+
+# The following is based on https://github.com/gma/bundler-exec
+export BUNDLER_EDITOR=mvim
+
+# ADD BACK ruby and rake
+bundled_commands=(annotate cap capify cucumber ey foreman guard heroku middleman nanoc rackup rainbows rails rspec shotgun spec spork thin thor unicorn unicorn_rails)
+
+## Functions
+
+_bundler-installed() {
+  which bundle > /dev/null 2>&1
+}
+
+_within-bundled-project() {
+  local check_dir=$PWD
+  while [ $check_dir != "/" ]; do
+    [ -f "$check_dir/Gemfile" ] && return
+    check_dir="$(dirname $check_dir)"
+  done
+  false
+}
+
+_run-with-bundler() {
+  if _bundler-installed && _within-bundled-project; then
+    bundle exec $@
+  else
+    $@
+  fi
+}
+
+## Main program
+for cmd in $bundled_commands; do
+  eval "function bundled_$cmd () { _run-with-bundler $cmd \$@}"
+  alias $cmd=bundled_$cmd
+
+  if which _$cmd > /dev/null 2>&1; then
+        compdef _$cmd bundled_$cmd=$cmd
+  fi
+done
 
