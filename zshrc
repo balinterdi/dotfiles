@@ -1,13 +1,29 @@
-. ~/.zsh/config
-. ~/.zsh/aliases
-. ~/.zsh/completion
+source ~/.zsh/config
+source ~/.zsh/aliases
+source ~/.zsh/completion
 
-# use .localrc for settings specific to one system
-[[ -f ~/.localrc ]] && .  ~/.localrc
+# Colors
+autoload -U colors
+colors
+setopt prompt_subst
 
-# RVM
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+# Prompt
+local smiley="%(?,%{$fg[green]%}✓%{$reset_color%},%{$fg[red]%}✗%{$reset_color%})"
 
-# tasks management
-[[ -f ~/Dropbox/SSP/Tasks/setup_aliases.sh ]] && source ~/Dropbox/SSP/Tasks/setup_aliases.sh
+PROMPT='${smiley} $(pwd)%{$reset_color%} > '
+RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info)%{$reset_color%}'
+
+# Replace the above with this if you use rbenv
+# RPROMPT='%{$fg[white]%} $(~/.rbenv/bin/rbenv version-name)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+
+# Show completion on first TAB
+setopt menucomplete
+
+# Load completions for Ruby, Git, etc.
+autoload compinit
+compinit
+
+# makes any directory dir under cdpath available from cd dir from anywhere
+setopt auto_cd
+cdpath=($HOME/code/sspinc $HOME/code/balinterdi $HOME/Projects/)
 
