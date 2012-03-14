@@ -8,9 +8,9 @@ colors
 setopt prompt_subst
 
 # Prompt
-local smiley="%(?,%{$fg[green]%}✓%{$reset_color%},%{$fg[red]%}✗%{$reset_color%})"
+local result="%(?,%{$fg[green]%}✓%{$reset_color%},%{$fg[red]%}✗%{$reset_color%})"
 
-PROMPT='${smiley} $(pwd)%{$reset_color%} > '
+PROMPT='${result} %~%{$reset_color%} » '
 RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info)%{$reset_color%}'
 
 # Replace the above with this if you use rbenv
