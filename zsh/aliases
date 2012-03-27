@@ -26,7 +26,5 @@ alias pf='python ~/code/python/t/t.py --task-dir . --list FIXME'
 
 alias repl='NODE_NO_READLINE=1 rlwrap -w-40 -p Green -C node jake console'
 
-# -------
-# Bundler
-# -------
+alias tmux="TERM=screen-256color-bce tmux"
 
