@@ -25,3 +25,10 @@ production () {
   heroku_with_app "$@" --app $(basename $(pwd))
 }
 
+db_password () {
+  $1 config | awk '/DATABASE_URL/ { split($0, parts, ":"); i=index(parts[3], "@"); print(substr(parts[3],0,i-1)) }' | pbcopy
+}
+
+mongo_password () {
+  $1 config | awk '/MONGO_URL/ { split($0, parts, ":"); i=index(parts[3], "@"); print(substr(parts[3],0,i-1)) }' | pbcopy
+}
