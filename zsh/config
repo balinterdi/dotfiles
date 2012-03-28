@@ -36,8 +36,8 @@ zle -N newtab
 
 # don't move this above the zle -N newtab
 # or else Emacs keybindings will stop working in Terminal
-export EDITOR="mvim"
-export GIT_EDITOR='mvim -f'
+export EDITOR="vim"
+export GIT_EDITOR='vim -f'
 
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
