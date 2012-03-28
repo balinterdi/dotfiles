@@ -3,7 +3,7 @@ source ~/.zsh/aliases
 source ~/.zsh/completion
 
 # Plugins
-for plugin_file (.zsh/plugins/*.zsh) source $plugin_file
+for plugin_file (~/.zsh/plugins/*.zsh) source $plugin_file
 
 # Colors
 autoload -U colors
