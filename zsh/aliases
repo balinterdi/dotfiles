@@ -28,3 +28,4 @@ alias repl='NODE_NO_READLINE=1 rlwrap -w-40 -p Green -C node jake console'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+alias letsblog="cd ~/code/balinterdi/my_octopress_site"
