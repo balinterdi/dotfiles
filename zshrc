@@ -26,7 +26,3 @@ setopt menucomplete
 autoload compinit
 compinit
 
-# makes any directory dir under cdpath available from cd dir from anywhere
-setopt auto_cd
-cdpath=($HOME/code/sspinc $HOME/code/balinterdi $HOME/Projects/)
-
