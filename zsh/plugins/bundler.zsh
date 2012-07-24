@@ -12,8 +12,7 @@ compinit -i
 # The following is based on https://github.com/gma/bundler-exec
 export BUNDLER_EDITOR=vim
 
-# ADD BACK ruby and rake
-bundled_commands=(annotate cap capify cucumber ey foreman guard heroku middleman nanoc rackup rainbows rails rspec shotgun spec spork thin thor unicorn unicorn_rails)
+bundled_commands=(annotate cap capify cucumber ey foreman guard heroku middleman nanoc rackup rainbows rake rails ruby rspec shotgun spec spork thin thor unicorn unicorn_rails)
 
 ## Functions
 
