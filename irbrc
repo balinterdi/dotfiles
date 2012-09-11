@@ -1,25 +1,21 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-require 'irb/completion'
-require 'irb/ext/save-history'
 
 IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+IRB.conf[:EVAL_HISTORY] = 100
+IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-def copy(str)
-  IO.popen('pbcopy', 'w') { |f| f << str.to_s }
-end
+# load rc files from .irbrc.d
+Dir[File.join("#{__FILE__}.d", "*.rb")].each {|f| require(f) rescue nil}
 
-def copy_history
-  history = Readline::HISTORY.entries
-  index = history.rindex("exit") || -1
-  content = history[(index+1)..-2].join("\n")
-  puts content
-  copy content
-end
-
-def paste
-  `pbpaste`
+# load .irbrc from current directory
+if File.exists?(".irbrc") and File.expand_path(".irbrc") != __FILE__
+  begin
+    load(".irbrc")
+    $console_extensions << "#{ANSI[:GREEN]}local .irbrc#{ANSI[:RESET]}"
+  rescue
+    puts "Error loading local .irbrc: #{ANSI[:RED]}#{$!}#{ANSI[:RESET]}"
+  end
 end
 
