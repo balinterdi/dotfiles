@@ -6,3 +6,6 @@ fi
 
 alias cd=cd_and_save_path
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
