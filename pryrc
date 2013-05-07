@@ -1,14 +1,15 @@
 Pry.config.editor = "vim"
+Pry.config.history.should_load = false
 
 # Prompt with ruby version
 # Pry.prompt = [proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
 
 # loading rails configuration if it is running as a rails console
-#if defined?(Rails) && Rails.env
-#  rails_rc = Rails.root + '/.railsrc'
-#  load(rails_rc) if File.exists?(rails_rc)
-#  extend Rails::ConsoleMethods if defined?(Rails::ConsoleMethods)
-#end
+if defined?(Rails) && Rails.env
+  rails_rc = Rails.root + '/.railsrc'
+  load(rails_rc) if File.exists?(rails_rc)
+  extend Rails::ConsoleMethods if defined?(Rails::ConsoleMethods)
+end
 #
 # enable Hirb to capture output
 if defined?(Hirb)
