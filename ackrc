@@ -30,6 +30,7 @@ rdoc=.rdoc
 --cucumber
 --js
 --markdown
+--php
 --rake
 --ruby
 --shell
@@ -43,4 +44,3 @@ rdoc=.rdoc
 --ignore-dir=doc
 --ignore-dir=vendor
 --ignore-dir=build
-
