@@ -12,3 +12,4 @@ TODO
 .TODO.done
 vendor/ruby
 .sass-cache
+.bundle/config
