@@ -28,9 +28,15 @@ alias repl='NODE_NO_READLINE=1 rlwrap -w-40 -p Green -C node jake console'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-alias letsblog="cd ~/code/balinterdi/my_octopress_site"
+alias letsblog="cd ~/code/balinterdi/balinterdi.com"
 alias dotfiles="cd ~/code/balinterdi/dotfiles"
 alias clojure="cd ~/code/clojure"
-alias cartman="cd ~/code/sspinc/cartman"
-alias cartman-etl="cd ~/code/sspinc/cartman-etl"
+
+alias wlb="cd ~/code/wlb/wlb"
+alias wlbu="cd ~/code/wlb/we-love-budapest"
+
+alias doky="cd ~/code/dbx/doky-ui"
+alias hammy="cd ~/code/dbx/hammy-admin"
+
+alias ideavote="cd ~/code/balinterdi/emberjs/ideavote"
 
