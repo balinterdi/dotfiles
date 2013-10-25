@@ -39,4 +39,10 @@ alias doky="cd ~/code/dbx/doky-ui"
 alias hammy="cd ~/code/dbx/hammy-admin"
 
 alias ideavote="cd ~/code/balinterdi/emberjs/ideavote"
+alias twitter-api="cd ~/code/balinterdi/emberjs/ember-twitter-api"
+alias twitter-client="cd ~/code/balinterdi/emberjs/ember-twitter-client"
+alias rockandroll="cd ~/code/balinterdi/emberjs/newsletter/rock-and-roll"
+alias emberjs="cd ~/code/balinterdi/emberjs/ember.js"
+alias emberdata="cd ~/code/balinterdi/emberjs/data"
+alias emberwebsite="cd ~/code/balinterdi/emberjs/website"
 
