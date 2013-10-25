@@ -6,6 +6,7 @@
 .rvmrc
 .tmproj
 .railsrc
+.powrc
 dump.rdb
 config/setup_load_paths.rb
 TODO
