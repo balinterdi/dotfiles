@@ -46,3 +46,6 @@ alias emberjs="cd ~/code/balinterdi/emberjs/ember.js"
 alias emberdata="cd ~/code/balinterdi/emberjs/data"
 alias emberwebsite="cd ~/code/balinterdi/emberjs/website"
 
+alias src="spring rails c"
+alias srs="spring rails s"
+alias srr="spring rake routes"
