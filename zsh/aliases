@@ -8,14 +8,17 @@ alias la='ls -A'
 alias ll='tree --dirsfirst -ChFupDaL 1'
 
 # git
-alias gp='git push'
-alias gd='git diff'
+alias g='git'
+alias gb='git branch'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
-alias gb='git branch'
-alias gst='git status -sb'
+alias gd='git diff'
+alias gg='git lg'
+alias gp='git push'
+alias gpll='git pull'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gst='git status -sb'
 
 # rails
 alias devlog='tail -f log/development.log'
