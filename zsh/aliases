@@ -31,9 +31,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias letsblog="cd ~/code/balinterdi/balinterdi.com"
 alias dotfiles="cd ~/code/balinterdi/dotfiles"
 alias clojure="cd ~/code/clojure"
-
-alias wlb="cd ~/code/wlb/wlb"
-alias wlbu="cd ~/code/wlb/we-love-budapest"
+alias toolsharp="vim ~/code/balinterdi/dotfiles/toololist"
 
 alias doky="cd ~/code/dbx/doky-ui"
 alias hammy="cd ~/code/dbx/hammy-admin"

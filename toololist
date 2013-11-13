@@ -1,0 +1,7 @@
+# List a la Ben Orenstein
+# I add tasks here which would enhance my everyday productivity
+
+- Add a command to edit this toololist
+- Find a way to ignore vendor for CtrlP and NERDTree at top level but not below
+- Add a leader command for ':Ag -w' since that's what I use most
+- See how Ctags can improve working with ruby files
