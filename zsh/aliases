@@ -1,6 +1,9 @@
 # cd
 alias ..='cd ..'
 
+# heroku
+alias h='heroku'
+
 # ls
 alias l="ls -lAh"
 alias ls="ls -F"
