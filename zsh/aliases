@@ -25,6 +25,7 @@ alias gst='git status -sb'
 
 # rails
 alias devlog='tail -f log/development.log'
+alias screenshot="ls tmp/capybara/*.png | tail -r -1 | xargs open"
 
 # t
 alias pt='python ~/code/python/t/t.py --task-dir . --list TODO'
