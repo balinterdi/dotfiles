@@ -1,9 +1,10 @@
-export PATH="$HOME/bin:$HOME/Dropbox/SSP/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)
+source ~/.zsh/short_functions
 
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
