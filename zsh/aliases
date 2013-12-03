@@ -23,6 +23,7 @@ alias gpll='git pull'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst='git status -sb'
 
+alias launchpg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 # rails
 alias devlog='tail -f log/development.log'
 alias screenshot="ls tmp/capybara/*.png | tail -r -1 | xargs open"
