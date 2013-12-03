@@ -47,3 +47,8 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
+# http://chneukirchen.org/blog/archive/2013/03/10-fresh-zsh-tricks-you-may-not-know.html
+# Copy the last word of the previous command, then the 2nd from last, etc. on M-m
+autoload -Uz copy-earlier-word
+zle -N copy-earlier-word
+bindkey "^[m" copy-earlier-word
