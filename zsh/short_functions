@@ -1,0 +1,31 @@
+function kall {
+  ps aux | ag "$1" | awk '{ print $2 }' | xargs kill -9 "$2";
+}
+
+function sr {
+  spring rake "$@";
+}
+
+function zsh_stats {
+  history 1 | awk '{print $2}' | sort | uniq -c | sort -rn | head;
+}
+
+function p {
+  ps aux | ag "$@";
+}
+
+function grecm {
+  git merge --no-ff "$1";
+}
+
+function gfp {
+  git format-patch master --stdout > $1;
+}
+
+function c {
+  cd ~/code/$1;
+}
+
+function last_modified {
+  ls -t $* 2> /dev/null | head -n 1
+}
