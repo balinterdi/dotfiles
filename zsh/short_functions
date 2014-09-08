@@ -14,12 +14,18 @@ function p {
   ps aux | ag "$@";
 }
 
-function grecm {
-  git merge --no-ff "$1";
-}
-
 function gfp {
   git format-patch master --stdout > $1;
+}
+
+function standup {
+  local days;
+  if [ -n "$1" ]; then
+    days="$1";
+  else
+    days="1";
+  fi
+  git log --since "$days days ago" --author="Balint Erdi";
 }
 
 function c {
