@@ -14,3 +14,4 @@ TODO
 vendor/ruby
 .sass-cache
 .bundle/config
+tags
