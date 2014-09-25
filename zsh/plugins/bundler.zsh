@@ -1,6 +1,7 @@
 # vendor everything still applies
 # http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
 alias bi="bundle install --path vendor"
+alias bo="bundle open"
 alias bu="bundle update"
 alias be="bundle exec"
 alias binit="bundle install && bundle package && echo 'vendor/ruby' >> .gitignore"
@@ -12,7 +13,7 @@ compinit -i
 # The following is based on https://github.com/gma/bundler-exec
 export BUNDLER_EDITOR=vim
 
-bundled_commands=(annotate cap capify cucumber foreman guard middleman nanoc rackup rainbows rake rails ruby rspec shotgun spec spork thin thor unicorn unicorn_rails)
+bundled_commands=(annotate cap capify cucumber guard middleman nanoc rackup rainbows rake rails ruby rspec shotgun spec spork thin thor unicorn unicorn_rails)
 
 ## Functions
 
