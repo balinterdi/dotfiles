@@ -33,5 +33,9 @@ function c {
 }
 
 function last_modified {
-  ls -t $* 2> /dev/null | head -n 1
+  ls -t $* 2> /dev/null | head -n 1;
+}
+
+function whousesport {
+  lsof -n -i4TCP | grep LISTEN | grep "$1";
 }
