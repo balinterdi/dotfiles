@@ -30,8 +30,14 @@ setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
 # Locale settings
-export LC_ALL="en_US"
-export LC_CTYPE="UTF-8"
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 zle -N newtab
 
@@ -49,7 +55,8 @@ bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
 # http://chneukirchen.org/blog/archive/2013/03/10-fresh-zsh-tricks-you-may-not-know.html
-# Copy the last word of the previous command, then the 2nd from last, etc. on M-m
+# Use M-. to copy the last word of the previous command, then the last word of the the command before that
+# M-m goes through the words in the previous command but it does not always work
 autoload -Uz copy-earlier-word
 zle -N copy-earlier-word
 bindkey "^[m" copy-earlier-word
