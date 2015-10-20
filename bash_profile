@@ -14,3 +14,4 @@ fi
 if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
+. /Users/balint/.profabevjava

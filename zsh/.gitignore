@@ -1,1 +1,5 @@
 plugins/tiwe.zsh
+plugins/ember-twitter.zsh
+plugins/loom.zsh
+plugins/october.zsh
+plugins/stores.zsh

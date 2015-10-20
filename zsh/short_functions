@@ -39,3 +39,7 @@ function last_modified {
 function whousesport {
   lsof -n -i4TCP | grep LISTEN | grep "$1";
 }
+
+function http(){
+  ruby -run -e httpd -- --port 9999 .
+}

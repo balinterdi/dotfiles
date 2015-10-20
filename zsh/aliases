@@ -25,8 +25,10 @@ alias gst='git status -sb'
 alias grecm='git merge --no-ff'
 
 alias gr="grunt"
+alias e="ember"
 
 alias launchpg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+
 # rails
 alias devlog='tail -f log/development.log'
 alias screenshot="ls tmp/capybara/*.png | tail -r -1 | xargs open"
@@ -54,10 +56,28 @@ alias rockandroll="cd ~/code/balinterdi/emberjs/newsletter/rock-and-roll"
 alias emberjs="cd ~/code/balinterdi/emberjs/ember.js"
 alias emberdata="cd ~/code/balinterdi/emberjs/data"
 alias emberwebsite="cd ~/code/balinterdi/emberjs/website"
+alias embercli="cd ~/code/balinterdi/emberjs/ember-cli"
+
+alias loomsdk="cd ~/code/theenginecompany/loomsdksite"
+alias theengine="cd ~/code/theenginecompany/theengine.co"
 
 alias src="spring rails c"
 alias srs="spring rails s"
 alias srr="spring rake routes"
 
 alias fs="cd ~/code/first-serve/web-client/src/app"
-alias book="cd ~/Projects/books/rock-and-roll-with-emberjs"
+alias fstenantreg="cd ~/code/first-serve/tenant-registration-client/src/client"
+alias rarwebook="cd ~/Projects/books/rock-and-roll-with-ember-js"
+alias rarwecode="cd ~/code/balinterdi/emberjs/rarwe-book/rarwe"
+alias rarweapi="cd ~/code/balinterdi/emberjs/rarwe-book/api"
+alias rarwelanding="cd ~/Projects/rock-and-roll-with-emberjs-landing-page"
+alias rarwemiddleman="cd /Users/balint/code/balinterdi/emberjs/rarwe-book/book-site"
+alias whyunowork="npm cache clear && rm -rf node_modules && npm i"
+
+alias loomcli="cd ~/code/theenginecompany/loomcli"
+alias loomgem="cd ~/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/loom-0.0.46"
+
+alias oldflowprosal="cd ~/code/joesaundersak/old-flowprosal"
+alias flowprosal="cd ~/code/joesaundersak/flowprosal-web-client"
+
+alias stores="cd ~/code/stores/stores-dashboard"
