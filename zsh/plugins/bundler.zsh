@@ -13,7 +13,7 @@ compinit -i
 # The following is based on https://github.com/gma/bundler-exec
 export BUNDLER_EDITOR=vim
 
-bundled_commands=(annotate cap capify cucumber guard middleman nanoc rackup rainbows rake rails ruby rspec shotgun spec spork thin thor unicorn unicorn_rails)
+bundled_commands=(annotate cap capify cucumber guard jekyll middleman nanoc rackup rainbows rake rails ruby rspec shotgun spec spork thin thor unicorn unicorn_rails)
 
 ## Functions
 

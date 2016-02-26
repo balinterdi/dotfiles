@@ -43,3 +43,13 @@ function whousesport {
 function http(){
   ruby -run -e httpd -- --port 9999 .
 }
+
+function gshow {
+  local ref;
+  if [ -n "$1" ]; then
+    ref="$1";
+  else
+    ref="head";
+  fi
+  git show --format=fuller "$ref";
+}

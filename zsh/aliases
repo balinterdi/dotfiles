@@ -24,6 +24,12 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst='git status -sb'
 alias grecm='git merge --no-ff'
 
+# editors
+alias vim='nvim'
+
+# network
+alias ping8='ping 8.8.8.8'
+
 alias gr="grunt"
 alias e="ember"
 
@@ -67,11 +73,15 @@ alias srr="spring rake routes"
 
 alias fs="cd ~/code/first-serve/web-client/src/app"
 alias fstenantreg="cd ~/code/first-serve/tenant-registration-client/src/client"
+
 alias rarwebook="cd ~/Projects/books/rock-and-roll-with-ember-js"
 alias rarwecode="cd ~/code/balinterdi/emberjs/rarwe-book/rarwe"
-alias rarweapi="cd ~/code/balinterdi/emberjs/rarwe-book/api"
+alias rarweapi="cd ~/code/balinterdi/emberjs/rarwe-book/rails-api"
 alias rarwelanding="cd ~/Projects/rock-and-roll-with-emberjs-landing-page"
 alias rarwemiddleman="cd /Users/balint/code/balinterdi/emberjs/rarwe-book/book-site"
+alias rarwecode="cd ~/code/balinterdi/emberjs/rarwe-book/rarwe"
+alias rarwedemo="cd ~/code/balinterdi/emberjs/rarwe-book/rarwe-demo"
+
 alias whyunowork="npm cache clear && rm -rf node_modules && npm i"
 
 alias loomcli="cd ~/code/theenginecompany/loomcli"
@@ -80,4 +90,6 @@ alias loomgem="cd ~/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/loom-0.0.46"
 alias oldflowprosal="cd ~/code/joesaundersak/old-flowprosal"
 alias flowprosal="cd ~/code/joesaundersak/flowprosal-web-client"
 
-alias stores="cd ~/code/stores/stores-dashboard"
+alias stico="cd ~/code/localistico/webapp"
+
+alias starrating="cd ~/code/balinterdi/emberjs/ember-cli-star-rating"
