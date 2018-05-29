@@ -44,6 +44,12 @@ function http(){
   ruby -run -e httpd -- --port 9999 .
 }
 
+function current_git_branch() {
+  local b;
+  b="$(git symbolic-ref HEAD 2>/dev/null)"
+  echo "${b##refs/heads/}$r"
+}
+
 function gshow {
   local ref;
   if [ -n "$1" ]; then
@@ -53,3 +59,15 @@ function gshow {
   fi
   git show --format=fuller "$ref";
 }
+
+function gpushc {
+  local b;
+  b=$(current_git_branch);
+  git push -u origin "$b";
+}
+
+function cp_to_kindle_content {
+  cp "$1" "/Users/balint/Library/Application Support/Kindle/My Kindle Content"
+}
+
+
