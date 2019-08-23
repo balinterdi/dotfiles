@@ -1,12 +1,5 @@
 PATH="$HOME/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-PATH="$PATH:/Applications/calibre.app/Contents/MacOS"
-# PATH="/Users/balint/Library/node-v6.10.3-darwin-x64/bin:$PATH" # gitbook
-# PATH="/Users/balint/Library/node-v7.10.1-darwin-x64/bin:$PATH"
-# PATH="/Users/balint/Library/node-v8.4.0-darwin-x64/bin:$PATH" # Cardstack
-# PATH="/Users/balint/Library/node-v8.9.0-darwin-x64/bin:$PATH" # Touristly
-PATH="/Users/balint/Library/node-v8.12.0-darwin-x64/bin:$PATH"
-
-PATH="$HOME/.yarn/bin:$PATH"
+PATH="$PATH:/Applications/calibre.app/Contents/MacOS:$HOME/.yarn/bin:$PATH"
 
 export PATH
 
